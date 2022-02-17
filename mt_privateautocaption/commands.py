@@ -12,7 +12,7 @@ USERNAME=Config.BOT_USERNAME
 
 # start_Msg, help_msg, about_msg
 # Team Mo Tect
-MT = "@Mo_Tech_YT"
+MT = "@howtodoyt"
 
 
 @Client.on_message(filters.private & filters.command("start"))
@@ -20,8 +20,8 @@ async def start_meg(client, update):
     text = f"""<b> 👋Hello {update.from_user.mention}\n\nI am an AutoCaption bot\n\nAll you have to do is add me to your channel and I will show you my power\n\nFor more info check help Button\n\n {MT}</b>"""
     reply_markup =  InlineKeyboardMarkup( [[
         InlineKeyboardButton("help↗️", callback_data="heroku"),
-        InlineKeyboardButton("🗣️Group", url="t.me/mo_tech_Group"),
-        InlineKeyboardButton("Channel📢", url="t.me/mo_tech_yt")
+        InlineKeyboardButton("🗣️Movie Search Group", url="t.me/hdtmoviefilter"),
+        InlineKeyboardButton("Contact📢", url="t.me/howtodoyt")
         ]]
     )
     await update.reply_text(
@@ -37,7 +37,7 @@ async def callback_data(client, update: CallbackQuery):
 
     if query_data == "heroku":
         buttons = [[
-            InlineKeyboardButton("🖥️ Tutorial Video 🖥️", url="https://youtu.be/p4Z9ZN1lZUk")
+            InlineKeyboardButton("🖥️ Filter Bot Tutorial 🖥️", url="https://youtu.be/LkY2feKT2k0")
             ],[
             InlineKeyboardButton("🏠Home", url=f"https://t.me/{USERNAME}?start=start"),
             InlineKeyboardButton("❌️Close", callback_data="motech"),
@@ -54,9 +54,8 @@ async def callback_data(client, update: CallbackQuery):
 
     if query_data == "about":
         buttons = [[
-            InlineKeyboardButton("🗣️Group", url="t.me/mo_tech_Group"),
-            InlineKeyboardButton("Channel📢", url="t.me/mo_tech_yt"),
-            InlineKeyboardButton("📃Bot List", url="https://t.me/Mo_Tech_YT/176")
+            InlineKeyboardButton("🗣️Movie Search Group", url="t.me/hdtmoviefilter"),
+            InlineKeyboardButton("Contact📢", url="t.me/howtodoyt")
             ],[
             InlineKeyboardButton("🏠Home", url=f"https://t.me/{USERNAME}?start=start"),
             InlineKeyboardButton("🔙Back", callback_data="heroku"),
